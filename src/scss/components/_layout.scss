@@ -1,27 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
 .container{
     margin: 0 auto;
     width: 100%;
     max-width: $max-width;
     background-color: skyblue;
-    padding: $padding;
+    padding-left: $padding;
+    padding-right: $padding;
 }
 .row{
     display: flex;
-    padding-left: -$padding;
-    padding-right: -$padding;
+    margin-left: -$padding;
+    margin-right: -$padding;
     background-color: pink;
     flex-wrap: wrap;
 }
 %column{
     flex: 0 0 100%;
     background-color: lightgreen;
+    padding: $padding;
 }
 @each $key, $value in $screen-sizes{
     @for $i from 1 through $column-count{
         .#{$key}-span-#{$i}{
             @extend %column;
         }
-        @media screen and (max-width: $value){
+        @media screen and (min-width: $value){
             .#{$key}-span-#{$i}{
                 flex: 0 0 (100% / $column-count) * $i;
             }
