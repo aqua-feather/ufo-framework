@@ -22,12 +22,15 @@
 }
 @each $key, $value in $screen-sizes{
     @for $i from 1 through $column-count{
-        .#{$key}-span-#{$i}{
+        .#{$key}-col-#{$i}{
             @extend %column;
         }
         @media screen and (min-width: $value){
-            .#{$key}-span-#{$i}{
+            .#{$key}-col-#{$i}{
                 flex: 0 0 (100% / $column-count) * $i;
+            }
+            .#{$key}-push-#{$i - 1}{
+                margin-left: (100% / $column-count) * ($i - 1);
             }
         }
     }
