@@ -42,6 +42,13 @@ To override the default colors and grid sizes you only need to create a _setting
 
 Now you can override the theme colors and grid sizes to your need
 
+
+```scss
+@import "settings";
+@import "~ufo-framework/src/scss/init";
+```
+
+
 > Please note that you can change the key as well as the value of the color and grid.
 
 ```scss
