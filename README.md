@@ -1,6 +1,9 @@
 
+[![NPM](https://nodei.co/npm/ufo-framework.png?compact=true)](https://npmjs.org/package/ufo-framework)
+
 # UFO Framework 
 ###### Based of framework by [DesignByCode]('https://www.npmjs.com/package/hoodoo-sass') 
+
 
 This is a very light weight css framework with only the bear minimal to create a response website layout. This framework only consist of 3 major components. 
 A customizable responsive grid, some buttons and form elements. 
