@@ -147,7 +147,6 @@ $colors: (
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
 
 ## Credits
 - [Renier Grobler](https://github.com/aque-feather)
