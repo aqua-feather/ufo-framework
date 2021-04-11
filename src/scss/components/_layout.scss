@@ -16,23 +16,24 @@
 
     flex-wrap: wrap;
 }
-%column{
+.col{
     flex: 0 0 100%;
     padding: $padding;
 }
 @each $key, $value in $screen-sizes{
     @for $i from 1 through $column-count{
         .#{$key}-col-#{$i}{
-            @extend %column;
+            @extend .col;
         }
-        @media screen and (min-width: $value){
+
+    }
+    @media screen and (min-width: $value){
+        @for $i from 1 through $column-count{
             .#{$key}-col-#{$i}{
                 flex: 0 0 (100% / $column-count) * $i;
             }
             .#{$key}-push-#{$i - 1}{
                 margin-left: (100% / $column-count) * ($i - 1);
             }
-        }
-    }
-
+    }}
 }
